@@ -4,7 +4,7 @@ import Main from './Components/Main/Main';
 
 function App() {
   return (
-    <div style={{ backgroundColor: "lightgray", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "lightgrey", minHeight: "100vh" }}>
       <Heading />
       <Main />
     </div>

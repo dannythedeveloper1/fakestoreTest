@@ -21,7 +21,10 @@ const Main = () => {
     return (
         <div>
             <h1 onClick={() => { request("get", 1).then(res => setActiveProduct(res.data)) }}>BackPack</h1>
-            <h1 onClick={() => { request("get", 2).then(res => setActiveProduct(res.data)) }}>Jacket</h1>
+            <h1 onClick={() => { request("get", 2).then(res => setActiveProduct(res.data)) }}>Slim Fit T-Shirts</h1>
+            <h1 onClick={() => { request("get", 3).then(res => setActiveProduct(res.data)) }}>Cotton Jacket</h1>
+            <h1 onClick={() => { request("get", 4).then(res => setActiveProduct(res.data)) }}>Slim Fit Sweater</h1>
+            <h1 onClick={() => { request("get", 5).then(res => setActiveProduct(res.data)) }}>Chain Bracelet</h1>
             {activeProduct && <ProductDetail activeProduct={activeProduct} />}
         </div>
     )
