@@ -8,11 +8,9 @@ const Products = ({ setActiveProduct }) => {
     useEffect(() => {
         productsData().then(res => {
             setAllProducts(res)
-            console.log(allProducts);
         })
     }, []);
-
-
+    console.log(allProducts);
 
     return (
         <div>
