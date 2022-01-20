@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ProductDetail from '../ProductDetail/ProductDetail'
 import Products from '../Products/Products'
 import axios from "axios"
+import { Container } from './MainStyles'
 
 const Main = () => {
     const [activeProduct, setActiveProduct] = useState(null);
@@ -19,14 +20,18 @@ const Main = () => {
     }, [])
 
     return (
-        <div>
-            <h1 onClick={() => { request("get", 1).then(res => setActiveProduct(res.data)) }}>BackPack</h1>
-            <h1 onClick={() => { request("get", 2).then(res => setActiveProduct(res.data)) }}>Slim Fit T-Shirts</h1>
-            <h1 onClick={() => { request("get", 3).then(res => setActiveProduct(res.data)) }}>Cotton Jacket</h1>
-            <h1 onClick={() => { request("get", 4).then(res => setActiveProduct(res.data)) }}>Slim Fit Sweater</h1>
-            <h1 onClick={() => { request("get", 5).then(res => setActiveProduct(res.data)) }}>Chain Bracelet</h1>
-            {activeProduct && <ProductDetail activeProduct={activeProduct} />}
-        </div>
+        <Container>
+            <div>
+                <h1 onClick={() => { request("get", 1).then(res => setActiveProduct(res.data)) }}>BackPack</h1>
+                <h1 onClick={() => { request("get", 2).then(res => setActiveProduct(res.data)) }}>Slim Fit T-Shirts</h1>
+                <h1 onClick={() => { request("get", 3).then(res => setActiveProduct(res.data)) }}>Cotton Jacket</h1>
+                <h1 onClick={() => { request("get", 4).then(res => setActiveProduct(res.data)) }}>Slim Fit Sweater</h1>
+                <h1 onClick={() => { request("get", 5).then(res => setActiveProduct(res.data)) }}>Chain Bracelet</h1>
+            </div>
+            <div>
+                {activeProduct && <ProductDetail activeProduct={activeProduct} />}
+            </div>
+        </Container>
     )
 }
 

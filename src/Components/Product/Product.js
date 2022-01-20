@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 
 const Product = ({ setActiveProduct, product, image, id, title }) => {
 
-    useEffect(() => {
-        console.log("data is fasho ===>", product)
-    }, []);
+    // useEffect(() => {
+    //     console.log("data is fasho ===>", product)
+    // }, []);
     return (
         <div>
             <h1>{product.title}</h1>

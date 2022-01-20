@@ -1,12 +1,21 @@
 import React, { useEffect } from 'react'
+import { Button, Card, Container } from './ProductDetailStyles'
 
 const ProductDetail = ({ activeProduct }) => {
 
 
     return (
-        <div>
-            <h1> {activeProduct.description}</h1>
-        </div>
+        <Card>
+            <h1>$ {activeProduct.price}</h1>
+            <p> {activeProduct.description}</p>
+            <Container display="flex">
+                {Array(Math.round(activeProduct.rating.rate))
+                    .fill()
+                    .map(() => (<p>🌟</p>))
+                }
+            </Container>
+            <Button>Add to Cart</Button>
+        </Card>
     )
 }
 
